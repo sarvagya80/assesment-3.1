@@ -63,9 +63,9 @@ Call transferOwnership function with the new owner's address.
 
 Only the current owner can perform this action.
 
-Force Revert:
+ Revert:
 
-Call forceRevert function to see a transaction revert for demonstration purposes
+Call Revert function to see a transaction revert for demonstration purposes
 
 ### Help
 
