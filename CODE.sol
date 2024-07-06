@@ -1,4 +1,3 @@
-
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
@@ -50,7 +49,11 @@ contract ExampleContract {
         owner = newOwner;
     }
 
-    function forceRevert() public {
-        revert("This function always reverts for demonstration");
+    function revertIfExceedsBalance(address user, uint amount) public view {
+        require(user != address(0), "Invalid address");
+        if (amount > balances[user]) {
+            revert("Amount exceeds user's balance");
+        }
     }
 }
+
